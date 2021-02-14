@@ -1,0 +1,28 @@
+<html>
+    <head>
+        
+        <style>
+            div {
+               min-width: 100px;
+               min-height: 100px;
+               padding: 30px;
+               border: 1px solid red;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Java script !!!!</h1>
+        <h3>Event bubbling and capturing or tricking demo...</h3>
+
+        <p>When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.</p>
+        <div id="grand-parent">
+            <div id="parent">
+                <div id="child">
+
+                </div>
+            </div>
+        </div>
+        <script src="./ebt-index.js"></script>
+    </body>
+</html>
