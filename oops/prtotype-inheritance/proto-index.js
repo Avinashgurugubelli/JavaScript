@@ -25,7 +25,7 @@ function Hero(name, level) {
     this.level = level;
     this.id = Hero.idCounter;
 
-     // methods overriding
+    // methods overriding
     Hero.prototype.getInfo = () => {
         return {
             id: this.id,
@@ -33,6 +33,10 @@ function Hero(name, level) {
             level: this.level
         }
     }
+
+    this.printDetails = () => {
+        console.log("id:" + this.id + " Name: " + name);
+    };
 }
 
 function Warrior(name, level, weapon) {
@@ -92,6 +96,7 @@ Healer.prototype.heal = function () {
 // Initialize individual character instances
 const hero1 = new Warrior('Bjorn', 1, 'axe');
 const hero2 = new Healer('Kanin', 1, 'cure');
+hero1.printDetails();
 
 console.log(hero1.getInfo());
 
